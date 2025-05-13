@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <browser.name>chrome</browser.name>
     </properties>
 
     <dependencies>
@@ -52,7 +53,13 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
+    <build>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+    </build>
 </project>

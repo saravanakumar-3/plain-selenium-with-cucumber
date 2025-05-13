@@ -13,9 +13,8 @@ public class Hooks extends BaseStefDef {
   }
 
   @After
-  public void afterScenario() throws InterruptedException {
+  public void afterScenario() {
     System.out.println("Inside afterScenario");
-    Thread.sleep(5000);
-    driver.close();
+    driver.quit();
   }
 }

@@ -5,10 +5,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 public class HomePageStepDef extends BaseStefDef {
-  HomePage homePage;
+  HomePage homePage = new HomePage(driver);
+
   @Given("navigate to google home page")
   public void navigateToGoogleSearchPage() {
-    homePage = new HomePage(driver);
     homePage.navigate();
   }
 
